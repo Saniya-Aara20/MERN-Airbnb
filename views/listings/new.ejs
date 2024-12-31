@@ -1,0 +1,89 @@
+<body>
+
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+
+            <h3>Create new listing!</h3>
+            <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div>
+                    <label for="title" class="form-label"></label>
+                    <input type="text" name="listing[title]" placeholder="enter title" class="form-control" required>
+                    <div class="valid-feedback"> Title looks good.</div>
+
+                </div>
+
+
+                <div>
+                    <label for="description" class="form-label"></label>
+
+                    <input type="text" name="listing[description]" placeholder="enter description" class="form-control"
+                        required>
+                    <div class="invalid-feedback"> Enter a short description...
+                    </div>
+
+                </div>
+
+                <div>
+                    <label for="image" class="form-label mt-3">Upload Image</label>
+                    <input type="file" name="listing[image]" class="form-control" required>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="price" class="form-label"></label>
+                        <input type="text" name="listing[price]" placeholder="enter price" class="form-control"
+                            required>
+
+                        <div class="invalid-feedback"> Price is invalid
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="col-md-8">
+                        <label for="country" class="form-label"></label>
+                        <input type="text" name="listing[country]" placeholder="enter country" class="form-control"
+                            required>
+
+                        <div class="invalid-feedback">Country is invalid.
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="location" class="form-label"></label>
+                    <input type="text" name="listing[location]" placeholder="enter location" class="form-control"
+                        required>
+                    <div class="invalid-feedback"> Location is invalid
+                    </div>
+                </div>
+                <div class=" mt-3">
+                    <label for="placeSelect">Type of Place</label>
+                    <select class="form-control" id="placeSelect" name="listing[place]">
+                        <option value="">Select...</option>
+                        <option value="trending">Trending</option>
+                        <option value="rooms">Rooms</option>
+                        <option value="cities">Iconic Cities</option>
+                        <option value="mountains">Mountains</option>
+                        <option value="castles">Castles</option>
+                        <option value="pools">Amazing Pools</option>
+                        <option value="camping">Camping</option>
+                        <option value="farms">Farms</option>
+                        <option value="arctic">Arctic</option>
+                        <option value="domes">Domes</option>
+                    </select>
+                </div>
+
+
+
+                <button class="btn btn-custom mt-3">Create</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
